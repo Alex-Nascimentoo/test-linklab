@@ -1,0 +1,110 @@
+@import 'variables';
+
+main {
+  padding-bottom: 5rem;
+
+  @media (min-width: $screen-md) {
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    width: 100%;
+  }
+}
+
+#section-list {
+  padding: 2rem 1rem;
+
+  @media (min-width: $screen-md) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .section-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    padding: 0 1rem;
+  
+    background-color: $clr-beige;
+  
+    color: $clr-primary;
+
+    @media (min-width: $screen-md) {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 7rem;
+
+      width: 100%;
+      padding: 2rem;
+    }
+  
+    .section-card-class {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: inline-block;
+
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
+
+    h1, h2 {
+      @media (min-width: $screen-md) {
+        margin: 0;
+      }
+    }
+
+    h2 {
+      // padding-right: 5rem;
+      width: 90%;
+
+      font-weight: 500;
+
+      @media (min-width: $screen-md) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  
+  .orange {
+    background-color: $clr-secondary;
+  
+    color: $clr-beige;
+
+    @media (min-width: $screen-md) {
+      padding-bottom: 4rem;
+    }
+  }
+}
+
+#product-list-title {
+  text-transform: uppercase;
+}
+
+#product-list {
+  margin-top: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: center;
+  gap: 2rem;
+
+  @media (min-width: $screen-md) {
+    // grid-template-columns: repeat(2, 1fr);
+
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  @media (min-width: $screen-lg) {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 23rem));
+  }
+
+  @media (min-width: $screen-xl) {
+    justify-content: space-between;
+  }
+}

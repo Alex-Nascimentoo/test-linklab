@@ -1,0 +1,161 @@
+@import 'variables';
+
+#mobile-menu-activated {
+  height: 100vh;
+  overflow-y: scroll;
+  position: relative;
+
+  #mobile-menu-content {
+    display: block;
+  }
+}
+
+header {
+  background-color: $clr-primary;
+
+  color: #fff;
+
+  padding-top: 2rem;
+
+  @media (min-width: $screen-md) {
+    padding-bottom: 17rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+
+    #logo {
+      margin: 0;
+    }
+
+    #nav-links {
+      display: none;
+
+      @media (min-width: $screen-md) {
+        display: flex;
+        gap: 1rem;
+        
+        list-style: none;
+      }
+    }
+    
+    #nav-content {
+      * {
+        display: inline-block;
+        margin: 0;
+      }
+      
+      #budget {
+        aspect-ratio: 1 / 1;
+        width: 1.6rem;
+
+        border-radius: 7px;
+
+        margin-right: 1rem;
+        padding: .5rem;
+
+        background-color: $clr-secondary;
+
+        p {
+          display: none;
+        }
+        
+        @media (min-width: $screen-md) {
+          aspect-ratio: unset;
+          width: fit-content;
+
+          background-color: rgba(255, 255, 255, 0.12);
+
+          padding: .5rem 1rem;
+
+          p {
+            display: inline-block;
+          }
+        }
+      }
+
+      #mobile-menu-btn {
+        font-size: xx-large;
+        font-weight: 100;
+
+        @media (min-width: $screen-md) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #hero {
+    padding-bottom: 2rem;
+
+    h1 {
+      font-size: xx-large;
+      font-weight: 400;
+    }
+
+    span {
+      color: $clr-accent;
+    }
+
+    p {
+      padding-right: 5rem;
+      line-height: 1.6;
+    }
+
+    @media (min-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  #mobile-menu-content {
+    position: absolute;
+    top: 7rem;
+    left: 0;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+
+    display: none;
+    
+    z-index: 2;
+
+    background-color: $clr-primary;
+
+    .mobile-menu-title {
+      font-weight: 500;
+      
+      width: 50%;
+      margin: 3rem 0 2.5rem;
+    }
+
+    #itens-catalog-title {
+      width: 70%;
+    }
+
+    .mobile-menu-subtitle {
+      font-size: large;
+      font-weight: 500;
+    }
+
+    #mobile-menu-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      a {
+        color: $clr-beige;
+        text-decoration: none;
+      }
+    }
+
+    .mobile-menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      p {
+        font-weight: 300;
+      }
+    }
+  }
+
+}
