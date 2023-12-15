@@ -31,8 +31,27 @@
 
     padding: .5rem 1rem;
 
+    :first-child {
+      max-width: 60%;
+
+      h2 {
+        max-width: 90%;
+      }
+    }
+
+    h2 {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    #price {
+      text-align: right;
+    }
+
     @media (min-width: $screen-md) {
-      gap: 2.5rem;
+      // gap: 2.5rem;
     }
 
     :first-child {

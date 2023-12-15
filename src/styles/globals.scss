@@ -10,6 +10,12 @@ body {
   background-color: #fff;
 }
 
+.mobile-menu-active {
+  @media (max-width: $screen-md) {
+    overflow: hidden;
+  }
+}
+
 .container {
   position: relative;
   max-width: $screen-sm;
