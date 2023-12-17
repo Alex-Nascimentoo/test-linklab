@@ -4,10 +4,12 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import '@/styles/header.scss';
 import { BsFileText, BsThermometerLow } from 'react-icons/bs'
-import { CgMenuRightAlt } from "react-icons/cg"
+import { CgMenuRightAlt, CgBowl } from "react-icons/cg"
 import { PiSlidersHorizontal } from "react-icons/pi";
-import { GiProtectionGlasses } from "react-icons/gi";
-import { FaRegSquare } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
+import { FaRegSquare, FaToolbox } from "react-icons/fa";
+import { MdOutlineScience } from 'react-icons/md';
+import SnowGlasses from './icons';
 
 function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false)
@@ -21,6 +23,12 @@ function Header() {
 
   function toggleDropdownMenuView() {
     setIsDropdownActive(!isDropdownActive)
+
+    const arrow: any = document.querySelector('#desktop-dropdown-icon')
+    const dropdown: any = document.querySelector('#dropdown-toggle')
+
+    arrow.classList.toggle("upside-down")
+    dropdown.classList.toggle("selected")
   }
 
   return (
@@ -38,7 +46,10 @@ function Header() {
         {/* Visible on tablet and larger screens */}
         <ul id='nav-links'>
           <li>Início</li>
-          <li onClick={toggleDropdownMenuView}>Produtos</li>
+          <li onClick={toggleDropdownMenuView} id='dropdown-toggle'>
+            Produtos
+            <IoIosArrowDown id="desktop-dropdown-icon" />
+          </li>
           <li>Laudos</li>
           <li>Sobre nós</li>
           <li>Certificações</li>
@@ -75,7 +86,7 @@ function Header() {
               Termômetros
             </p>
             <p>
-              <GiProtectionGlasses className="dropdown-icon" />
+              <SnowGlasses clasName="dropdown-icon" />
               Acessórios
             </p>
           </div>
@@ -88,9 +99,18 @@ function Header() {
               <FaRegSquare className="dropdown-icon" />
               Inox e Ferragens
             </p>
-            <p>Vidrarias</p>
-            <p>Plásticos</p>
-            <p>Porcelanas</p>
+            <p>
+              <MdOutlineScience className="dropdown-icon" />
+              Vidrarias
+            </p>
+            <p>
+              <FaToolbox className="dropdown-icon" />
+              Plásticos
+            </p>
+            <p>
+              <CgBowl className="dropdown-icon" />
+              Porcelanas
+            </p>
           </div>
         </div>
       </div>

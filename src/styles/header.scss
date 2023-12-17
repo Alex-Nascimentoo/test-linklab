@@ -23,6 +23,7 @@ header {
   color: #fff;
 
   padding-top: 2rem;
+  padding-bottom: 10rem;
 
   @media (min-width: $screen-md) {
     padding-bottom: 17rem;
@@ -58,6 +59,15 @@ header {
         color: $clr-secondary;
 
         cursor: pointer;
+      }
+
+      #nav-links {
+        display: flex;
+        align-items: center;
+      }
+
+      .selected {
+        color: $clr-secondary;
       }
 
       @media (min-width: $screen-md) {
@@ -154,6 +164,18 @@ header {
     margin-right: .5rem;
   }
 
+  #desktop-dropdown-icon {
+    vertical-align: middle;
+    margin-left: .3rem;
+
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+  }
+
+  .upside-down {
+    transform: rotate(180deg);
+  }
+
   #dropdown-options {
     column-gap: 3rem;
 
@@ -182,6 +204,15 @@ header {
       column-gap: 2rem;
 
       font-weight: 300;
+
+      p {
+        transition: .13s;
+      }
+
+      p:hover {
+        color: $clr-secondary;
+        cursor: pointer;
+      }
     }
   }
 
@@ -191,6 +222,10 @@ header {
 
   .dropdown-active {
     display: flex;
+
+    @media (max-width: $screen-md) { 
+      display: none;
+    }
   }
 
   #hero {

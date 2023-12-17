@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import { MdOutlineScience } from "react-icons/md";
 import { GiWaterBottle } from "react-icons/gi";
 import { LiaToolsSolid } from "react-icons/lia";
+import Image from 'next/image';
 
 type Product = {
   title: string;
@@ -28,6 +29,23 @@ export default function Home() {
 
   return (
     <main>
+      <div id="round-icon">
+        <Image
+          src="/round-icon.svg"
+          alt='Made with science'
+          fill
+        />
+      </div>
+
+      <div id="dots-icon">
+        {/* <Image
+          src="/dots-icon.svg"
+          alt='visual dots'
+          fill
+          id='dots-icon-icon'
+        /> */}
+      </div>
+
       <section className="container" id='section-list'>
         <div className='section-card'>
           <p className="section-card-class">produtos</p>

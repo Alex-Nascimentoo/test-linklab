@@ -21,7 +21,7 @@ body {
   max-width: $screen-sm;
   padding-inline: 1rem;
   margin: 0 auto;
- 
+
   @media (min-width: $screen-md) {
     max-width: $screen-md;
   }
